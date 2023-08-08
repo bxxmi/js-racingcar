@@ -7,8 +7,12 @@ import {
   validateDuplicateName,
   validateEmptyName,
   validateNameLength,
-} from "../src/utils/regex";
+} from "../src/utils/validation";
 
+// 공백을 허용하지 않는 테스트 케이스 추가
+// 정상 케이스 중 특수문자 또는 이상한 문자가 들어왔을 때 어떻게 인식하는가에 대한 테스트
+// 자동차를 여러 개 입력했을 때에도 어떻게 나오는지
+// 테스트 코드 형식 맞춰서 심플하게 다시 작성하기
 describe("자동차 경주 게임 테스트입니다.", () => {
   let racingModel;
   let racingView;
@@ -110,6 +114,7 @@ describe("자동차 경주 게임 테스트입니다.", () => {
 
       racingModel.carList = carList;
 
+      // 테스트 설계가 잘못됨 -> 게임 시작을 하지 않았는데 winner 출력
       const winners = racingModel.getWinners();
 
       racingView.showRacingGameWinners(winners);

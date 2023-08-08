@@ -4,7 +4,7 @@ import {
   validateDuplicateName,
   validateEmptyName,
   validateNameLength,
-} from "../utils/regex";
+} from "../utils/validation";
 import { MAX_RACING_ROUNDS, MOVE_CAR_THRESHOLD } from "../data/constants";
 
 export default class RacingController {
